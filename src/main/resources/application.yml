@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    name: bharosa_safecrop_v0.1
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssism
+    username: root
+    password: 123
+
+    hikari:
+      idleTimeout: 60000
+      minimumIdle: 2
+      maximumPoolSize: 2
+      connectionTimeout: 60000
+      poolName: MyPoolName
+      connectionTestQuery: SELECT 1
+
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    propertie:
+    hibernate.dialect: org.hibernate.dialect.MySQL55Dialect
+    hibernate.jdbc:
+      batch_size: 1000
